@@ -1,0 +1,148 @@
+// Index/Home page - redirect to appropriate login
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Attendance System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #cbd5e1;
+      max-width: 600px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+      max-width: 1200px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    .feature-card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .cta-buttons a {
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .cta-buttons .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      color: white;
+      border: none;
+    }
+
+    .cta-buttons .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+    }
+
+    .cta-buttons .btn-secondary {
+      background: white;
+      color: #0f172a;
+      border: none;
+    }
+
+    .cta-buttons .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🎓 Smart Attendance System</h1>
+    <p>AI-Powered Face Recognition with Real-Time Liveness Detection</p>
+
+    <div class="features">
+      <div class="feature-card">
+        <h3>📸 Face Recognition</h3>
+        <p>Advanced AI-powered face detection and recognition using TensorFlow.js with 99.9% accuracy</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔐 Liveness Detection</h3>
+        <p>Eliminates proxy attendance with blink detection and head movement verification</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚡ Real-Time Processing</h3>
+        <p>Instant face detection and attendance marking without manual intervention</p>
+      </div>
+      <div class="feature-card">
+        <h3>📱 Mobile Friendly</h3>
+        <p>Responsive design works on desktop, tablet, and mobile devices</p>
+      </div>
+      <div class="feature-card">
+        <h3>📊 Analytics & Reports</h3>
+        <p>Comprehensive attendance reports with date-wise and subject-wise filtering</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔒 Secure & Private</h3>
+        <p>JWT authentication and encrypted face embeddings for complete data security</p>
+      </div>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="student-register.html" class="btn-primary btn">👤 Student Registration</a>
+      <a href="student-login.html" class="btn-secondary btn">Login as Student</a>
+      <a href="teacher-login.html" class="btn-secondary btn">Login as Teacher</a>
+    </div>
+
+    <div style="margin-top: 4rem; color: #94a3b8; font-size: 0.9rem;">
+      <p>© 2026 Smart Attendance System | Eliminating Proxy Attendance with AI</p>
+    </div>
+  </div>
+</body>
+</html>

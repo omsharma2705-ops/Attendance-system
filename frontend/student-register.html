@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Attendance - Student Registration</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      📊 Smart Attendance System
+    </div>
+    <ul class="nav-menu">
+      <li><a href="student-login.html">Student Login</a></li>
+      <li><a href="teacher-login.html">Teacher Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="form-container">
+      <h1 style="text-align: center; margin-bottom: 2rem; color: #2563eb;">Student Registration</h1>
+
+      <div id="successMessage" class="alert alert-success" style="display: none;"></div>
+      <div id="errorMessage" class="alert alert-error" style="display: none;"></div>
+
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rollNumber">Roll Number *</label>
+          <input type="text" id="rollNumber" name="rollNumber" required>
+        </div>
+
+        <div class="form-group">
+          <label for="enrollmentNumber">Enrollment Number</label>
+          <input type="text" id="enrollmentNumber" name="enrollmentNumber">
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department *</label>
+          <select id="department" name="department" required>
+            <option value="">Select Department</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Electronics">Electronics</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="semester">Semester *</label>
+          <select id="semester" name="semester" required>
+            <option value="">Select Semester</option>
+            <option value="1">1st Semester</option>
+            <option value="2">2nd Semester</option>
+            <option value="3">3rd Semester</option>
+            <option value="4">4th Semester</option>
+            <option value="5">5th Semester</option>
+            <option value="6">6th Semester</option>
+            <option value="7">7th Semester</option>
+            <option value="8">8th Semester</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91 XXXXXXXXXX">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" required minlength="6">
+          <div class="helper-text">Minimum 6 characters</div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password *</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required minlength="6">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+
+        <p style="text-align: center; margin-top: 1.5rem; color: #64748b;">
+          Already have an account? <a href="student-login.html" style="color: #2563eb;">Login here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/student-register.js"></script>
+</body>
+</html>

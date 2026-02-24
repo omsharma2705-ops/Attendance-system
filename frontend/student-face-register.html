@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Attendance - Face Registration</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      📊 Smart Attendance System
+    </div>
+    <div class="nav-menu">
+      <span id="userInfo" style="color: #64748b;"></span>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card" style="max-width: 700px; margin: 0 auto;">
+      <div class="card-header">👤 Face Registration for Attendance</div>
+
+      <div id="successMessage" class="alert alert-success" style="display: none;"></div>
+      <div id="errorMessage" class="alert alert-error" style="display: none;"></div>
+      <div id="infoMessage" class="alert alert-info" style="display: none;"></div>
+
+      <p style="margin-bottom: 1rem; color: #64748b;">
+        Register your face for attendance marking. We'll capture multiple angles of your face to improve recognition accuracy.
+      </p>
+
+      <div style="background: #f0f9ff; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+        <h4 style="margin-bottom: 0.5rem;">📋 Liveness Check Requirements:</h4>
+        <ul style="margin-left: 1.5rem; color: #64748b;">
+          <li>Blink your eyes naturally</li>
+          <li>Slight head movements (left/right)</li>
+          <li>Good lighting conditions</li>
+          <li>Look directly at the camera</li>
+          <li>Capture at least 5 different angles</li>
+        </ul>
+      </div>
+
+      <div id="cameraStatus" style="text-align: center; margin-bottom: 1rem;">
+        <span class="liveness-indicator">
+          <span class="liveness-dot checking"></span>
+          Initializing camera...
+        </span>
+      </div>
+
+      <div class="video-container">
+        <video id="videoElement" autoplay playsinline></video>
+        <canvas id="canvasElement"></canvas>
+      </div>
+
+      <div style="text-align: center; margin: 1rem 0;">
+        <div id="livenessStatus" style="display: none; margin-bottom: 1rem;">
+          <span class="liveness-indicator" id="livenessIndicator">
+            <span class="liveness-dot checking"></span>
+            Checking liveness...
+          </span>
+        </div>
+      </div>
+
+      <div class="video-controls">
+        <button type="button" class="btn btn-success" id="captureBtn">📸 Capture Face</button>
+        <button type="button" class="btn btn-secondary" id="resetBtn">🔄 Reset</button>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h4 style="margin-bottom: 1rem;">Captured Faces: <span id="captureCount">0</span>/5</h4>
+        <div id="captureGrid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;"></div>
+      </div>
+
+      <div style="margin-top: 2rem; display: none;" id="submitSection">
+        <button type="button" class="btn btn-primary btn-block" id="submitBtn">✅ Complete Registration</button>
+      </div>
+
+      <div style="margin-top: 1rem;">
+        <a href="student-dashboard.html" class="btn btn-secondary btn-block">← Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.12/dist/face-api.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/face-recognition.js"></script>
+  <script src="js/student-face-register.js"></script>
+</body>
+</html>
